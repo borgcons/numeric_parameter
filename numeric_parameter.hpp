@@ -27,6 +27,10 @@ public:
         return value;
     }
 
+    template<typename Result> operator Result() const 
+    {
+        return boost::numeric_cast<Result>(value);
+    }
 private:
     Target value;
 };
